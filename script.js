@@ -34,3 +34,22 @@ document.getElementById("month").innerHTML = month;
 document.getElementById("year").innerHTML = year;
 document.getElementById("day").innerHTML = day;
 /////////////////////////////////////////////////////////////////////////////////
+
+
+//удаление задания 
+var remove, i;
+function setRemoveListeners(){
+	remove = document.getElementsByClassName("delete");
+	for(i = 0; i < remove.length; i++){
+		remove[i].addEventListener("click", toRemove);
+	}
+}
+function toRemove(event){
+	var path = event.path[2];
+	console.log(path);
+	path.remove();
+
+}
+
+/////////////////////////////////////////////////////////////////////////
+
