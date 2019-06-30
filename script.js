@@ -176,3 +176,9 @@ function enter(event){
 			}		
 	}
 }
+
+
+window.onload = function(){
+	setRemoveListeners();
+	setCheckbox();
+}
