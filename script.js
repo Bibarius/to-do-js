@@ -53,3 +53,27 @@ function toRemove(event){
 
 /////////////////////////////////////////////////////////////////////////
 
+//зачеркивание выполненных
+var node, parent, span;
+function setCheckbox(){
+	checkbox = document.getElementsByClassName("checkbox");
+	for(i = 0; i < checkbox.length; i++){
+		checkbox[i].addEventListener("change", clicked);
+	}
+}
+
+function clicked(event){
+	node = event.path[0];
+	parent = node.parentNode;
+	span = parent.children[0];
+	style = span.style;
+	if(node.checked){
+		style.color = "rgb(90, 94, 109)";
+		style.textDecoration = 'line-through';
+	}
+	else{
+		style.color = "black";
+		style.textDecoration = "none";
+	}	
+}
+
