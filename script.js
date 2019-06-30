@@ -77,3 +77,102 @@ function clicked(event){
 	}	
 }
 
+///////////////////////////////////////////////////////////////////////
+//добавление задания 
+var input = document.getElementsByClassName("input")[0];
+var divInput = document.getElementsByClassName("hidden")[0];
+var plus = document.getElementsByClassName("icon")[0];
+var opacity = document.getElementsByClassName("main_block")[0];
+var text, div, before, parentDiv, label, newSpan, newCheckbox, newImg, del;
+input.addEventListener("keydown", enter);
+
+function cross(){
+	divInput.style.display = "block";
+}
+
+function enter(event){
+	if(event.keyCode == 13){
+		text = input.value;		
+		divInput.style.display = "none";
+		if(document.getElementsByClassName("element").length == 1){
+			div = document.createElement("div");
+			div.setAttribute("class", "element clearfix");
+			document.getElementsByClassName("mainList")[0].appendChild(div);
+			label = document.createElement("label");
+			label.setAttribute("class", "clearfix");
+
+			newSpan = document.createElement("span");
+			label.appendChild(newSpan);
+			newSpan.setAttribute("class", "item");
+
+			newCheckbox = document.createElement("input")
+			newCheckbox.setAttribute("class", "checkbox");
+			newCheckbox.setAttribute("type", "checkbox");
+			newCheckbox.setAttribute("name", "element");
+
+			newImg = document.createElement("img");
+			newImg.setAttribute("class", "close");
+			newImg.setAttribute("src", "close.png");
+
+			del = document.createElement("div");
+			newImg.setAttribute("class", "delete");
+
+
+			div.appendChild(label);
+			div.appendChild(del);
+			label.appendChild(newSpan);
+			label.appendChild(newCheckbox);
+			del.appendChild(newImg);
+
+
+
+			newSpan.innerHTML = text;
+			input.value = "";
+
+			setRemoveListeners();
+			setCheckbox();
+		}
+		else{
+			div = document.createElement("div");
+			before = document.getElementsByClassName("element")[1];
+			parentDiv = before.parentNode;
+			parentDiv.insertBefore(div, before);
+			div.setAttribute("class", "element clearfix");
+
+			//заполняем новый div
+			label = document.createElement("label");
+			label.setAttribute("class", "clearfix");
+
+			newSpan = document.createElement("span");
+			label.appendChild(newSpan);
+			newSpan.setAttribute("class", "item");
+
+			newCheckbox = document.createElement("input")
+			newCheckbox.setAttribute("class", "checkbox");
+			newCheckbox.setAttribute("type", "checkbox");
+			newCheckbox.setAttribute("name", "element");
+
+			newImg = document.createElement("img");
+			newImg.setAttribute("class", "close");
+			newImg.setAttribute("src", "close.png");
+
+			del = document.createElement("div");
+			newImg.setAttribute("class", "delete");
+
+
+			div.appendChild(label);
+			div.appendChild(del);
+			label.appendChild(newSpan);
+			label.appendChild(newCheckbox);
+			del.appendChild(newImg);
+
+
+
+			newSpan.innerHTML = text;
+			input.value = "";
+
+			setRemoveListeners();
+			setCheckbox();
+			}		
+	}
+}
