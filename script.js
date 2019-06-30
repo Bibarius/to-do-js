@@ -27,3 +27,10 @@ switch(month){
 	case 10: month = "НОЯ"; break;
 	case 11: month = "ДЕК"; break;
 }
+
+//вставка даты в HTML
+document.getElementById("date").innerHTML = date;
+document.getElementById("month").innerHTML = month;
+document.getElementById("year").innerHTML = year;
+document.getElementById("day").innerHTML = day;
+/////////////////////////////////////////////////////////////////////////////////
