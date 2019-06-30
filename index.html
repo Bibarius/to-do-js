@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="utf-8">
-	<title>To do list</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+    <title>To do list</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body onload="setRemoveListeners()">
-	<div class="main_block">
-		<div class="container">
-			<div class="dateLine clearfix">
-				<div class="dateLeft clearfix">
-					<h1 id="date">12</h1>
-					<div class="year_month">
-						<span id="month">JAN</span><br>
-						<span id="year">2018</span>
-					</div>
-				</div>
-				<div class="dateRight">
-					<span id="day">TUESDAY</span>
-				</div>
-			</div>
+    <div class="main_block">
+        <div class="container">
+            <div class="dateLine clearfix">
+                <div class="dateLeft clearfix">
+                    <h1 id="date">12</h1>
+                    <div class="year_month">
+                        <span id="month">JAN</span><br>
+                        <span id="year">2018</span>
+                    </div>
+                </div>
+                <div class="dateRight">
+                    <span id="day">TUESDAY</span>
+                </div>
+            </div>
 
-			<div class="mainList">
-				<div class="hidden element clearfix">
-					<input class="input" type="text" name="do">	
-				</div>
-				<div class="element clearfix">
-					<label class="clearfix">
-						<span class="item">Купить молочка</span>
-						<input class="checkbox" type="checkbox" name="element">
-					</label>
-					<div class="delete">
-						<img class="close" src="close.png">
-					</div>					
-				</div>
-				<div class="element clearfix">
-					<label class="clearfix">
-						<span class="item">Разложить пасьянс</span>
-						<input class="checkbox" type="checkbox" name="element">
-					</label>
-					<div class="delete">
-						<img class="close" src="close.png">
-					</div>					
-				</div>
-				<div class="element clearfix">
-					<label class="clearfix">
-						<span class="item">Поплавать </span>
-						<input class="checkbox" type="checkbox" name="element">
-					</label>
-					<div class="delete">
-						<img class="close" src="close.png">
-					</div>					
-				</div>
+            <div class="mainList">
+                <div class="hidden element clearfix">
+                    <input class="input" type="text" name="do">
+                </div>
+                <div class="element clearfix">
+                    <label class="clearfix">
+                        <span class="item">Купить молочка</span>
+                        <input class="checkbox" type="checkbox" name="element">
+                    </label>
+                    <div class="delete">
+                        <img class="close" src="close.png">
+                    </div>
+                </div>
+                <div class="element clearfix">
+                    <label class="clearfix">
+                        <span class="item">Разложить пасьянс</span>
+                        <input class="checkbox" type="checkbox" name="element">
+                    </label>
+                    <div class="delete">
+                        <img class="close" src="close.png">
+                    </div>
+                </div>
+                <div class="element clearfix">
+                    <label class="clearfix">
+                        <span class="item">Поплавать </span>
+                        <input class="checkbox" type="checkbox" name="element">
+                    </label>
+                    <div class="delete">
+                        <img class="close" src="close.png">
+                    </div>
+                </div>
 
-			</div>
-			<div class="icon">
-				<img onclick="cross()" src="plus.png" class="plus">
-			</div>	
-		</div>	
-	</div>
+            </div>
+            <div class="icon">
+                <img onclick="cross()" src="plus.png" class="plus">
+            </div>
+        </div>
+    </div>
 
-	<script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
